@@ -8,6 +8,9 @@
     text-decoration: none;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+input {
+  font-family: "Poppins", sans-serif;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -32,7 +35,7 @@ section{
     padding: 100px 0;
 }
 .max-width{
-    max-width: 1300px;
+    max-width: 1500px;
     padding: 0 80px;
     margin: auto;
 }
@@ -76,8 +79,8 @@ section{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     background: transparent;
     border: 2px solid rgb(182, 226, 255);
     border-radius: 50%;
@@ -114,11 +117,11 @@ section{
 }
 
 
-.about, .services, .skills, .teams, .contact, footer{
+.about, .courses, .skills, .teams, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
-.services .serv-content,
+.coursess .coursecontent,
 .skills .skills-content,
 .contact .contact-content{
     display: flex;
@@ -348,194 +351,469 @@ section .title::after{
     background: none;
 }
 
-/* services section styling */
-.services, .teams{
+/* courses section styling */
+
+
+.courses, .teams{
     color:#0c2b41;
     background:  #0c2b41;
 }
-.services .title {
+.courses .title {
     color:white;
 }
-.services .title::before,
+.courses .title::before,
 .teams .title::before{
     background: #fff;
 }
-.services .title::after,
+.courses .title::after,
 .teams .title::after{
    background: #0c2b41;
     content: "what we provide";
 }
-.services .serv-content .card{
-    width: calc(33% - 20px);
+.coursecontent{
+   width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+ 
+
+}
+.card{
+    width: 100%;
+  height: 600px;
+  position: absolute;
+ left: 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition: 1s;
+  
+}
+.slide_div{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  margin: 0 30px 0 30px;
+}
+.content-1{
+   position: relative;
+  height: 370px;
+  width: 240px;
+  
+    
+    border-radius: 14px;
+   
+    padding: 30px 25px;
     text-align: center;
-    border-radius: 6px;
-    padding: 50px 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
     background:   #3c5f798a;
-    color: white;
+    color: white;  
 }
-.services .serv-content .card:hover{
-    background: #ffffffd8;
-    color:   #0c2b41;
+.button{
+  position: absolute;
+  width: 240px;
+  height: 370px;
+
 }
-.services .serv-content .card .box{
-    transition: all 0.3s ease;
+#slider1,
+#slider2,
+#slider3,
+#slider4,
+#slider5,
+#slider6,
+#slider7 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  pointer-events: none;
+  visibility: hidden;
 }
-.services .serv-content .card:hover .box{
-    transform: scale(1.05);
+
+#slider1:target ~ .card #cont1
+{
+  width: 290px;
+  height: 450px;
+  background-color: transparent;
+  filter: saturate(100%);
+   background: #ffffffd8;
+   color:   #0c2b41;
 }
-.services .serv-content .card i{
+#slider2:target ~ .card #cont2
+{
+ width: 290px;
+  height: 450px;
+  background-color: transparent;
+  filter: saturate(100%);
+   background: #ffffffd8;
+   color:   #0c2b41;
+}
+#slider3:target ~ .card #cont3
+{
+ width: 290px;
+  height: 450px;
+  background-color: transparent;
+  filter: saturate(100%);
+   background: #ffffffd8;
+   color:   #0c2b41;
+}
+#slider4:target ~ .card #cont4
+{
+ width: 290px;
+  height: 450px;
+  background-color: transparent;
+  filter: saturate(100%);
+   background: #ffffffd8;
+   color:   #0c2b41;
+}
+#slider5:target ~ .card #cont5
+{
+ width: 290px;
+  height: 450px;
+  background-color: transparent;
+  filter: saturate(100%);
+   background: #ffffffd8;
+   color:   #0c2b41;
+   justify-content: center;
+}
+ 
+
+#slider1:target ~ .card {
+  left:40%;
+ 
+}
+#slider2:target ~ .card{
+  left:20%;
+}
+#slider3:target ~ .card{
+  left:0%;
+}
+#slider4:target ~ .card{
+  left:-20%;
+}
+#slider5:target ~ .card{
+  left:-40%;
+}
+
+.courses .coursecontent .card i{
     font-size: 50px;
     color: #2083e0; 
     transition: color 0.3s ease;
 }
-.services .serv-content .card:hover i{
-    color:   #0c2b41;
+#slider1:target ~ .card #cont1 i{
+   color:   #0c2b41;
+ 
 }
-.services .serv-content .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
+#slider2:target ~ .card #cont2 i{
+   color:   #0c2b41;
+ 
 }
-
-/* skills section styling */
-
-.skills .title::after{
-    content: "what i know";
+#slider3:target ~ .card #cont3 i{
+   color:   #0c2b41;
+ 
 }
-.skills .skills-content .column{
-    width: calc(50% - 30px);
+#slider4:target ~ .card #cont4 i{
+   color:   #0c2b41;
+ 
 }
-.skills .skills-content .left .text{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.skills .skills-content .left p{
-    text-align: justify;
-}
-.skills .skills-content .left a{
-    display: inline-block;
-    background:   #2083e0;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 16px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid   #2083e0;
-    transition: all 0.3s ease;
-}
-.skills .skills-content .left a:hover{
-    color: #2083e0;
-    background: none;
-}
-.skills .skills-content .right .bars{
-    margin-bottom: 15px;
-}
-.skills .skills-content .right .info{
-    display: flex;
-    margin-bottom: 5px;
-    align-items: center;
-    justify-content: space-between;
-}
-.skills .skills-content .right span{
-    font-weight: 500;
-    font-size: 18px;
-}
-.skills .skills-content .right .line{
-    height: 5px;
-    width: 100%;
-    background: lightgrey;
-    position: relative;
-}
-.skills .skills-content .right .line::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background:  #2083e0;
-}
-.skills-content .right .html::before{
-    width: 95%;
-}
-.skills-content .right .css::before{
-    width: 95%;
-}
-.skills-content .right .js::before{
-    width: 80%;
-}
-.skills-content .right .php::before{
-    width: 50%;
-}
-.skills-content .right .mysql::before{
-    width: 70%;
+#slider5:target ~ .card #cont5 i{
+   color:   #0c2b41;
+ 
 }
 
-/* teams section styling */
-.teams .title::after{
-    content: "who with me";
+/*******login*******************************************************/
+
+.container1 {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 190vh;
+  background-color: #ffffff;
+  height: 90vh;
+  overflow: hidden;
+  
+ 
 }
-.teams .carousel .card{
-    background: #222;
-    border-radius: 6px;
-    padding: 25px 35px;
-    text-align: center;
-    overflow: hidden;
-    transition: all 0.3s ease;
+
+.forms-container1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
-.teams .carousel .card:hover{
-    background:  #2083e0;
+
+.signin-signup {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 75%;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr;
+  z-index: 5;
+  transition: 1s 0.7s ease-in-out;
 }
-.teams .carousel .card .box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 5rem;
+  overflow: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  transition: all 0.2s 0.7s;
+}
+
+form.sign-in-form {
+  z-index: 2;
+}
+
+form.sign-up-form {
+  opacity: 0;
+  z-index: 1;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  max-width: 380px;
+  width: 100%;
+  background-color: #dddddda7;
+  margin: 10px 0;
+  height: 47px;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+}
+
+.input-field i {
+  text-align: center;
+  line-height: 55px;
+  color: #acacac;
+  transition: 0.5s;
+  font-size: 1.1rem;
+}
+
+.input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+.input-field input::placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
+.social-text {
+  padding: 0.7rem 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+
+/**.home-sci {
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.45rem;
+  color: #333;
+  border-radius: 50%;
+  border: 1px solid #333;
+  text-decoration: none;
+  font-size: .1rem;
+  transition: 0.3s;
+}
+
+.home-sci1:hover {
+  color: #82affd;
+  border-color: #4481eb;
+}
+.home-sci1 a{
+    display: inline-flex;
     justify-content: center;
-    transition: all 0.3s ease;
-}
-.teams .carousel .card:hover .box{
-    transform: scale(1.05);
-}
-.teams .carousel .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
-.teams .carousel .card img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid rgb(182, 226, 255);
     border-radius: 50%;
-    border: 5px solid  #2083e0;
-    transition: all 0.3s ease;
+    font-size: 20px;
+    color: #bcddf3;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
 }
-.teams .carousel .card:hover img{
-    border-color: #fff;
+.home-sci1 a :hover{
+    /*background:rgb(250, 250, 250);
+    color: #bcddf3;
+    box-shadow: 0 0 20pxrgb(5, 151, 248);
+    transform: scale(1.5);
+
+}**/
+.panels-container1 {
+  position: absolute;
+  height: 150vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
-.owl-dots{
-    text-align: center;
-    margin-top: 20px;
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  text-align: center;
+  z-index: 6;
 }
-.owl-dot{
-    height: 13px;
-    width: 13px;
-    margin: 0 5px;
-    outline: none!important;
-    border-radius: 50%;
-    border: 2px solid   #2083e0!important;
-    transition: all 0.3s ease;
+
+.left-panel {
+  pointer-events: all;
+  padding: 4rem 17% 2rem 12%;
 }
-.owl-dot.active{
-    width: 35px;
-    border-radius: 14px;
+
+.right-panel {
+  pointer-events: none;
+  padding: 3rem 12% 2rem 17%;
 }
-.owl-dot.active,
-.owl-dot:hover{
-    background:   #2083e0!important;
+
+.panel .content1 {
+  color: #fff;
+  transition: .9s 0.6s ease-in-out;
+  transition-delay: 0.6s;
 }
+
+.panel h3 {
+  font-weight: 600;
+  line-height: 1;
+  font-size: 1.5rem;
+}
+
+.panel p {
+  font-size: 1.1rem;
+  padding: 0.8rem 0;
+}
+
+
+.btn {
+  width: 150px;
+  background-color: #0c2b41;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.btn:hover {
+  background-color:#0c2b41ab;
+}
+.btn.transparent {
+  margin: 0;
+  background: none;
+  border: 2px solid #fff;
+  width: 130px;
+  height: 41px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.image {
+  width: 100%;
+  transition: .9s .6s ease-in-out;
+  transition-delay: 0.4s;
+}
+
+.container1:before {
+  content: "";
+  position: absolute;
+  height: 2000px;
+  width: 2000px;
+  top: -10%;
+  right: 48%;
+  transform: translateY(-50%),rgb(0, 0, 0);
+  background-image: linear-gradient(-45deg,#103a58 0%, #132342 70%);
+  transition: 1.8s ease-in-out;
+  border-radius: 40%;
+  z-index: 6;
+}
+
+
+
+
+.right-panel .image,
+.right-panel .content1 {
+  transform: translateX(800px);
+}
+
+/* ANIMATION */
+
+.container1.sign-up-mode:before {
+  transform: translate(100%, -50%);
+  right: 52%;
+}
+
+.container1.sign-up-mode .left-panel .image,
+.container1.sign-up-mode .left-panel .content1 {
+  transform: translateX(-800px);
+}
+
+.container1.sign-up-mode .right-panel .image,
+.container1.sign-up-mode .right-panel .content1 {
+  transform: translateX(0%);
+}
+
+.container1.sign-up-mode .left-panel {
+  pointer-events: none;
+}
+
+.container1.sign-up-mode .right-panel {
+  pointer-events: all;
+}
+
+.container1.sign-up-mode .signin-signup {
+  left: 25%;
+}
+.container1.sign-up-mode form.sign-up-form {
+  opacity: 1;
+  z-index: 2;
+}
+
+.container1.sign-up-mode form.sign-in-form {
+  opacity: 0;
+  z-index: 1;
+}
+
+/*****************************************************************************/
+
 
 /* contact section styling */
 .contact .title::after{
@@ -650,11 +928,113 @@ footer span a:hover{
 
 /* responsive media query start */
 @media (max-width: 1104px) {
+     /*login 890px*/
     .about .about-content .left img{
         height: 350px;
         width: 350px;
     }
+    .container1 {
+    min-height: 800px;
+    height: 100vh;
+  }
+  .signin-signup {
+    width: 100%;
+    top: 95%;
+    transform: translate(-50%, -100%);
+    transition: 1s 0.8s ease-in-out;
+  }
+
+  .signin-signup,
+  .container1.sign-up-mode .signin-signup {
+    left: 50%;
+  }
+
+  .panels-container1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+
+  .panel {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.5rem 8%;
+    grid-column: 1 / 2;
+  }
+
+  .right-panel {
+    grid-row: 3 / 4;
+  }
+
+  .left-panel {
+    grid-row: 1 / 2;
+  }
+
+  .image {
+    width: 200px;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.6s;
+  }
+
+  .panel .content1 {
+    padding-right: 15%;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.8s;
+  }
+
+  .panel h3 {
+    font-size: 1.2rem;
+  }
+
+  .panel p {
+    font-size: 0.7rem;
+    padding: 0.5rem 0;
+  }
+
+  .btn.transparent {
+    width: 110px;
+    height: 35px;
+    font-size: 0.7rem;
+  }
+
+  .container1:before {
+    width: 1500px;
+    height: 1500px;
+    transform: translateX(-50%);
+    left: 30%;
+    bottom: 68%;
+    right: initial;
+    top: initial;
+    transition: 2s ease-in-out;
+  }
+
+  .container1.sign-up-mode:before {
+    transform: translate(-50%, 100%);
+    bottom: 32%;
+    right: initial;
+  }
+
+  .container1.sign-up-mode .left-panel .image,
+  .container1.sign-up-mode .left-panel .content1 {
+    transform: translateY(-300px);
+  }
+
+  .container1.sign-up-mode .right-panel .image,
+  .container1.sign-up-mode .right-panel .content1 {
+    transform: translateY(0px);
+  }
+
+  .right-panel .image,
+  .right-panel .content1 {
+    transform: translateY(300px);
+  }
+
+  .container1.sign-up-mode .signin-signup {
+    top: 5%;
+    transform: translate(-50%, 0);
+  }
 }
+
 
 @media (max-width: 991px) {
     .max-width{
@@ -698,7 +1078,7 @@ footer span a:hover{
         font-size: 35px;
     }
     .home .home-content a{
-        font-size: 23px;
+        font-size: 22px;
         padding: 10px 30px;
     }
     .max-width{
@@ -716,7 +1096,7 @@ footer span a:hover{
     .about .about-content .right{
         flex: 100%;
     }
-    .services .serv-content .card{
+    .courses .coursecontent .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
@@ -740,7 +1120,7 @@ footer span a:hover{
     .home .home-content a{
         font-size: 20px;
     }
-    .services .serv-content .card{
+    .courses .coursecontent .card{
         width: 100%;
     }
 }
@@ -774,4 +1154,28 @@ footer span a:hover{
         font-size: 23px;
         line-height: 38px;
     }
+    /*login 570px*/
+    form {
+    padding: 0 1.5rem;
+  }
+
+  .image {
+    display: none;
+  }
+  .panel .content1 {
+    padding: 0.5rem 1rem;
+  }
+  .container1 {
+    padding: 1.5rem;
+  }
+
+  .container1:before {
+    bottom: 72%;
+    left: 50%;
+  }
+
+  .container1.sign-up-mode:before {
+    bottom: 28%;
+    left: 50%;
+  }
 }
