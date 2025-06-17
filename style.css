@@ -633,46 +633,35 @@ form.sign-up-form {
 }
 
 
-/**.home-sci {
-  height: 35px;
-  width: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 0.45rem;
-  color: #333;
-  border-radius: 50%;
-  border: 1px solid #333;
-  text-decoration: none;
-  font-size: .1rem;
-  transition: 0.3s;
-}
+
 
 .home-sci1:hover {
-  color: #82affd;
-  border-color: #4481eb;
+  color:  #0C2356;
+  border-color:  #0C2356;
 }
+
 .home-sci1 a{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     background: transparent;
-    border: 2px solid rgb(182, 226, 255);
+    border: 2px solid #0C2356;
     border-radius: 50%;
     font-size: 20px;
-    color: #bcddf3;
+    color: #0C2356;
     text-decoration: none;
     margin: 30px 15px 30px 0;
 }
+
 .home-sci1 a :hover{
-    /*background:rgb(250, 250, 250);
-    color: #bcddf3;
+    /*background:rgb(250, 250, 250);*/
+    color: #0C2356;
     box-shadow: 0 0 20pxrgb(5, 151, 248);
     transform: scale(1.5);
 
-}**/
+}
 .panels-container1 {
   position: absolute;
   height: 150vh;
@@ -1096,10 +1085,7 @@ footer span a:hover{
     .about .about-content .right{
         flex: 100%;
     }
-    .courses .coursecontent .card{
-        width: calc(50% - 10px);
-        margin-bottom: 20px;
-    }
+    
     .skills .skills-content .column,
     .contact .contact-content .column{
         width: 100%;
@@ -1120,9 +1106,95 @@ footer span a:hover{
     .home .home-content a{
         font-size: 20px;
     }
-    .courses .coursecontent .card{
-        width: 100%;
-    }
+    .card {
+    flex-direction: column; /* Change direction to vertical */
+    overflow-y: auto;
+    overflow-x: hidden;
+   
+    transition: 1s;
+    background-color: green;
+  }
+
+  .slide_div {
+    width: 70%;
+    height: 50vh; /* Full height for each slide */
+    margin: 30px 0 30px 0;
+  }
+
+  .content-1 {
+    height: 50vh;
+    width: 70%;
+    object-fit: cover;
+  }
+  .button{
+  position: absolute;
+   height: 50vh;
+    width: 70%;
+}
+
+#slider1:target ~ .card #cont1
+{
+  height: 60vh;
+    width: 80%;
+  background-color: transparent;
+  filter: saturate(100%);
+   background: #ffffffd8;
+   color:   #0c2b41;
+}
+#slider2:target ~ .card #cont2
+{
+height: 60vh;
+    width: 80%;
+  background-color: transparent;
+  filter: saturate(100%);
+   background: #ffffffd8;
+   color:   #0c2b41;
+}
+#slider3:target ~ .card #cont3
+{
+height: 60vh;
+    width: 80%;
+  background-color: transparent;
+  filter: saturate(100%);
+   background: #ffffffd8;
+   color:   #0c2b41;
+}
+#slider4:target ~ .card #cont4
+{
+height: 60vh;
+    width: 80%;
+  background-color: transparent;
+  filter: saturate(100%);
+   background: #ffffffd8;
+   color:   #0c2b41;
+}
+#slider5:target ~ .card #cont5
+{
+height: 60vh;
+    width: 80%;
+  background-color: transparent;
+  filter: saturate(100%);
+   background: #ffffffd8;
+   color:   #0c2b41;
+   justify-content: center;
+}
+#slider1:target ~ .card {
+  top:40%;
+ 
+}
+#slider2:target ~ .card{
+  top:20%;
+}
+#slider3:target ~ .card{
+  top:0%;
+}
+#slider4:target ~ .card{
+  top:-20%;
+}
+#slider5:target ~ .card{
+  top:-40%;
+}
+
 }
 
 @media (max-width: 500px) {
