@@ -1,3 +1,4 @@
+       
 <!DOCTYPE html>
 
 <html lang="en">
@@ -5,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soften Technologies</title>
-    <link rel="icon" href="images/soften_web-1.png">
+   <!-- <link rel="icon" href="images/soften_web-1.png">-->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -14,6 +15,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/64d58efce2.js"crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -26,11 +29,11 @@
         <div class="max-width">
             <div class="logo" ><a href="#">Soften<span>Technologies</span></a></div>
             <ul class="menu">
-                
-                <li><a href="#about" class="menu-btn">About</a></li>
+                     <li><a href="#about" class="menu-btn">About</a></li>
                 <li><a href="#courses" class="menu-btn">Courses</a></li>
                 <li><a href="#login" class="menu-btn">Login</a></li>
                 <li><a href="#contact" class="menu-btn">Contact</a></li>
+                 <li><a href="#teams" class="menu-btn">Team</a></li>
             </ul>
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
@@ -111,7 +114,7 @@
                 <div class="card">
                     <div class="slide_div">
                         <div class="content-1" id="cont1" >
-                        <i class='bx bx-broadcast'></i>
+                        <i class='bx  bx-code'  ></i> 
                         <div class="text"><b>Software & Programmability</b></div>
                         <p><br>JavaScript<br>
                           MEA(R)N Stack<br>  
@@ -196,84 +199,92 @@
     <!-- login------------->
     <section class="login" id="login">
         <div class="max-width">
-            
-    <div class="container1">
-      <div class="forms-container1">
-        <div class="signin-signup">
-          <form action="#" class="sign-in-form">
-            <h2 class="title">Sign in</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+          <div class="container1">
+      
+            <!-- Forms -->
+            <div class="forms-container1">
+              <div class="signin-signup">
+      
+                <!-- Sign In Form -->
+                <form action="#" class="sign-in-form">
+                  <h2 class="title">Sign in</h2>
+                  <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username" />
+                  </div>
+                  <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" />
+                  </div>
+                  <input type="submit" value="Login" class="btn solid" />
+                </form>
+      
+                <!-- Sign Up Form -->
+                <form action="#" class="sign-up-form">
+                  <h2 class="title">Connect with us</h2>
+                  <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="name" placeholder="Enter your Name" required/>
+                  </div>
+                  <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Email" required/>
+                  </div>
+                  <div class="field-textarea1" >
+                  
+                    <textarea   id="msg" placeholder="Message..."  required ></textarea>
+                  </div>
+                  <div class="button-area1">
+                  <button class="btn solid" type="submit" onclick="getValue()">Send message</button>
+                </div>
+              </form>
+      
+              </div>
             </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+      
+            <!-- Panels -->
+            <div class="panels-container1">
+      
+              <!-- Left Panel -->
+              <div class="panel left-panel">
+                <div class="content1">
+                  <h3>New here?</h3>
+                  <p>
+                    Start your learning journey with us — create an account to access courses, resources, and expert guidance.
+                  </p>
+                  <button class="btn transparent" id="sign-up-btn">
+                    Need help?
+                  </button>
+                </div>
+              </div>
+      
+              <!-- Right Panel -->
+              <div class="panel right-panel">
+                <div class="content1">
+                  <h3>One of us?</h3>
+                  <p>
+                    Welcome back! Let’s continue where you left off.
+                  </p>
+                  <button class="btn transparent" id="sign-in-btn">
+                    Sign in
+                  </button>
+                </div>
+              </div>
+      
             </div>
-            <input type="submit" value="Login" class="btn solid" />
-            <p class="social-text">Or Sign in with social platforms</p>
-              <div class="home-sci1">
-              <a href="https://www.facebook.com"><img src="images/icons/facebook2.png" width="25px" height="25px"></a>    
-              <a href="https://www.google.com"><img src="images/icons/google (2).png" width="26px" height="26px"></a>
-              <a href="https://twitter.com"><img src="images/icons/x .png" width="24px" height="24px"></i></a>
-             <a href="https://in.linkedin.com"><img src="images/icons/linedin2.png" width="26px" height="26px"></a><!--WhatsApp icon by Icons8-->
-
-            </div>
-          </form>
-          <form action="#" class="sign-up-form">
-            <h2 class="title">Sign up</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
-            </div>
-            <input type="submit" class="btn" value="Sign up" />
-            <p class="social-text">Or Sign up with social platforms</p>
-                <div class="home-sci1">
-              <a href="https://www.facebook.com"><img src="images/icons/facebook2.png" width="25px" height="25px"></a>    
-              <a href="https://www.google.com"><img src="images/icons/google (2).png" width="26px" height="26px"></a>
-              <a href="https://twitter.com"><img src="images/icons/x .png" width="24px" height="24px"></i></a>
-             <a href="https://in.linkedin.com"><img src="images/icons/linedin2.png" width="26px" height="26px"></a><!--WhatsApp icon by Icons8-->
-
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div class="panels-container1">
-        <div class="panel left-panel">
-          <div class="content1">  <!---hryyrrkrkr-->
-            <h3>New here ?</h3>
-            <p>
-              Start your learning journey with us — create an account to access courses,resources, and expert guidance.
-            </p>
-            <button class="btn transparent" id="sign-up-btn">
-              Sign up
-            </button>
+      
           </div>
-         <img src="images/image1.png" class="image" alt="" />
         </div>
-        <div class="panel right-panel">
-          <div class="content1">
-            <h3>One of us ?</h3>
-            <p>
-              Welcome back! Let’s continue where you left off.
-            </p>
-            <button class="btn transparent" id="sign-in-btn">
-              Sign in
-            </button>
-          </div>
-        <img src="img/register.svg" class="image" alt="" />
-        </div>
-      </div>
-    </div>
+      </section>
+      
+                 <!-- <p class="social-text">Or Sign in with social platforms</p>
+                    <div class="home-sci1">
+                    <a href="https://www.facebook.com"><img src="images/icons/facebook2.png" width="25px" height="25px"></a>    
+                    <a href="https://www.google.com"><img src="images/icons/google (2).png" width="26px" height="26px"></a>
+                    <a href="https://twitter.com"><img src="images/icons/x .png" width="24px" height="24px"></i></a>
+                   <a href="https://in.linkedin.com"><img src="images/icons/linedin2.png" width="26px" height="26px"></a>    WhatsApp icon by Icons8-->
+      
+                 
 
     <!-- contact section start -->
     <section class="contact" id="contact">
@@ -332,7 +343,35 @@
             </div>
         </div>
     </section>
-
+    <!-- team section start -->
+     <section class="teams" id="teams">
+        <div class="max-width">
+            <h2 class="title" style="color: white;">The team</h2>
+            <div class="carousel owl-carousel">
+                <div class="card1">
+                    <div class="box1">
+                        <img src="images/team/profile-1.jpg" alt="">
+                        <div class="text">Rajeev T.R</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="card1">
+                    <div class="box1">
+                        <img src="images/team/profile-3.jpg" alt="">
+                        <div class="text">Silsa Shaji</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="card1">
+                    <div class="box1">
+                        <img src="images/team/profile-2.jpg" alt="">
+                        <div class="text">Emilda Babu</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- footer section start -->
     <footer>
         <span>Created By <a href="https://github.com/HoNtErBoT">soften technologies</a> | <span class="far fa-copyright"></span> 2023 All rights reserved.</span>
@@ -353,7 +392,15 @@
           fetch(send)
 
           console.log(inputValue);
-        }
-      </script>
+
+
+           document.querySelectorAll('.content-1').forEach(card => {
+    card.addEventListener('click', () => {
+      card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    });
+  });
+        } </script> 
+
+       
 </body>
 </html>
